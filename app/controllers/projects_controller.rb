@@ -7,10 +7,9 @@ class ProjectsController < ApplicationController
   def create
     @skill = Skill.find(params[:skill_id])
     @project = @skill.projects.new(project_params)
-    @project.done = false
     if @project.save
       flash[:notice] = "Project successfully added!"
-      redirect_to skill_path(@skill)
+      redirect_to skill_path(@project.skill)
     else
       render :new
     end
