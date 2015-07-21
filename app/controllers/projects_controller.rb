@@ -41,11 +41,11 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @skill = Skill.find(params[:skill_id])
+
     project = Project.find(params[:id])
     project.destroy
     flash[:notice] = "Project successfully deleted."
-    redirect_to skill_path(@skill)
+    redirect_to projects_path
   end
 
 private
