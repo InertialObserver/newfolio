@@ -10,11 +10,12 @@
 
 <p><%= link_to "Add a project", new_skill_project_path(@skill) %> </p>
 
-<% if @skill.projects.any? %>
+<ul>
+  <% if @skill.projects.any? %>
 
-<% @skill.projects.each do |project| %>
+  <% @skill.projects.each do |project| %>
 
-<%= project.name %>
+  <li><%= project.name %></li>
 <% end %>
 
 <% else %>

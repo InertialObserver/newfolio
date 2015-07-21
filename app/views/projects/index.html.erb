@@ -1,2 +1,18 @@
 <%= content_for(:title, "Projects") %>
 <p><%= link_to "Home", skills_path %></p>
+
+<div class="container">
+  <h1>Projects</h1>
+
+<ul>
+  <% if @projects.any? %>
+
+  <% @projects.each do |project| %>
+
+  <li><%= project.name %></li>
+  <% end %>
+
+  <% else %>
+    <p>There are no projects yet.</p>
+  <% end %>
+</div>
