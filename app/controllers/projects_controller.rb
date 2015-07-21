@@ -25,12 +25,10 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-
     @project = Project.find(params[:id])
   end
 
   def update
-
     @project = Project.find(params[:id])
     if @project.update(project_params)
       flash[:notice] = "Project successfully updated."
