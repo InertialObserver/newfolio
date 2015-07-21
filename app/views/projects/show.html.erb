@@ -1,0 +1,9 @@
+<%= content_for(:title, @project.name) %>
+
+<p><%= link_to "Home", skills_path %></p>
+
+<h3>
+  <%= link_to @project.name, edit_skill_project_path(@project) %>
+  <%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, skill_project_path(@project), data: {confirm: "Are you sure?", method: "delete"} %>
+  <h4><%= @project.description %></h4>
+</h3>

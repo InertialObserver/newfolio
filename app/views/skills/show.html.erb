@@ -5,8 +5,10 @@
 <h1>
   <%= link_to @skill.name, edit_skill_path(@skill) %>
   <%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, skill_path(@skill), data: {confirm: "Are you sure?", method: "delete"} %>
-  <small><%= @skill.description %></small>
 </h1>
+  <ul>
+  <li><%= @skill.description %></li>
+</ul>
 
 <p><%= link_to "Add a project", new_skill_project_path(@skill) %> </p>
 

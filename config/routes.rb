@@ -3,15 +3,14 @@ Rails.application.routes.draw do
   root :to => 'skills#index'
 
    resources :skills do
-     resources :projects, :except =>[:index]
+     resources :projects, only: [:new, :create]
 end
-   resources :projects, only: [:index]
+   resources :projects, only: [:index, :show, :edit, :update, :destroy]
 
   get 'pages/home'
-  #
   get 'pages/about'
-  #
   get 'pages/contact'
+  get 'pages/deutsch'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
