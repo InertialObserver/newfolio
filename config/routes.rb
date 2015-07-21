@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   root :to => 'skills#index'
 
-resources :skills do
-resources :projects, :except =>[:index]
+   resources :skills do
+     resources :projects, :except =>[:index]
 end
   # get 'pages/home'
   #
-  # get 'pages/about'
+  get 'pages/about'
   #
   # get 'pages/contact'
 
