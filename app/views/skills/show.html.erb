@@ -12,7 +12,10 @@
 
 <% if @skill.projects.any? %>
 
-<%= @project.name %>
+<% @skill.projects.each do |project| %>
+
+<%= project.name %>
+<% end %>
 
 <% else %>
   <p>There are no projects yet.</p>
