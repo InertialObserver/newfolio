@@ -1,0 +1,11 @@
+<%= content_for(:title, "Skills") %>
+<div class="container">
+<h1>Skills</h1>
+<ul>
+  <% @skills.each do |skill| %>
+    <li><%= link_to skill.name, skill_path(skill) %></li>
+  <% end %>
+</ul>
+</div>
+
+<p><%= link_to "Create a new skill", new_skill_path %></p>
