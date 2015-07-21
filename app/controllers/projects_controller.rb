@@ -25,23 +25,22 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @skill = Skill.find(params[:skill_id])
+
     @project = Project.find(params[:id])
   end
 
   def update
-    @skill = Skill.find(params[:skill_id])
+
     @project = Project.find(params[:id])
     if @project.update(project_params)
       flash[:notice] = "Project successfully updated."
-      redirect_to skill_path(@skill)
+      redirect_to project_path
     else
       render :edit
     end
   end
 
   def destroy
-
     project = Project.find(params[:id])
     project.destroy
     flash[:notice] = "Project successfully deleted."
