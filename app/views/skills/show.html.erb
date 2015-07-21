@@ -1,0 +1,19 @@
+<%= content_for(:title, @skill.name) %>
+
+<p><%= link_to "Home", skills_path %></p>
+
+<h1>
+  <%= link_to @skill.name, edit_skill_path(@skill) %>
+  <%= link_to '<i class="glyphicon glyphicon-trash"></i>'.html_safe, skill_path(@skill), data: {confirm: "Are you sure?", method: "delete"} %>
+  <small><%= @skill.description %></small>
+</h1>
+
+<p><%= link_to "Add a project", new_skill_project_path(@skill) %> </p>
+
+<% if @skill.projects.any? %>
+
+<%= @project.name %>
+
+<% else %>
+  <p>There are no projects yet.</p>
+<% end %>
