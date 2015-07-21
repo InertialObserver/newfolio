@@ -5,6 +5,8 @@ Rails.application.routes.draw do
    resources :skills do
      resources :projects, :except =>[:index]
 end
+   resources :projects, only: [:index]
+ 
   # get 'pages/home'
   #
   get 'pages/about'
