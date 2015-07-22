@@ -12,4 +12,13 @@ describe "the add project process" do
 
     expect(page).to have_content "A language"
   end
+
+  it "will show errors if the form is blank" do
+    skill = Skill.create(name: "Java", description: "Another language")
+    visit skill_path(skill)
+    click_link "Add a project"
+    click_on "Create Project"
+
+    expect(page).to have_content "All forms must be filled:"
+  end
 end
