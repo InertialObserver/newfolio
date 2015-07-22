@@ -14,7 +14,7 @@ Jessi Iler (https://github.com/InertialObserver)
 ------------
 
 Install by first cloning the repository:
-git clone https://github.com/InertialObserver/myfolio.git
+git clone https://github.com/InertialObserver/newfolio.git
 
 At the command line, Run:
 bundle install
