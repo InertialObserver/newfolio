@@ -1,28 +1,44 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Epicodus RoR Portfolio Project
+Work in progress...
 
-Things you may want to cover:
+This is an app that eventually will showcase my accomplishments in coding since starting at Epicodus.
 
-* Ruby version
+# Creator
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Jessi Iler (https://github.com/InertialObserver)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Installation
+------------
+
+Install by first cloning the repository:
+git clone https://github.com/InertialObserver/myfolio.git
+
+At the command line, Run:
+bundle install
+
+Start postgres
+
+Run:
+rake db:create db:migrate
+
+Run:
+rails server
+
+In your browser, go to the following page:
+`localhost:3000`
+
+
+#Bug reports
+
+If you discover any bugs, feel free to create an issue on GitHub. Please add as much information as possible to help us fixing the possible bug. We also encourage you to help even more by forking and sending us a pull request.
+
+#Known Bugs
+
+As a work in progress, there is as yet no authentication, more pages to be added, etc.
+
+#License
+
+Apache License 2.0. Copyright 2015
